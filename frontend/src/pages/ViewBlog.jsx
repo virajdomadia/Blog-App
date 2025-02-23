@@ -11,7 +11,7 @@ const ViewBlog = () => {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/blogs/${id}`,
+          `https://blog-app-backend-nnuo.onrender.com/api/blogs/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -29,11 +29,14 @@ const ViewBlog = () => {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this blog post?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        await axios.delete(
+          `https://blog-app-backend-nnuo.onrender.com/api/blogs/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         navigate("/");
       } catch (error) {
         console.error("Error deleting blog post:", error);

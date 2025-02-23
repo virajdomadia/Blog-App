@@ -27,7 +27,7 @@ const CreateBlog = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/blogs",
+        "https://blog-app-backend-nnuo.onrender.com/api/blogs",
         {
           title,
           content,

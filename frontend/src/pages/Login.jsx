@@ -27,7 +27,7 @@ const Login = () => {
       console.log("Sending login request...");
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://blog-app-backend-nnuo.onrender.com/api/auth/login",
         {
           email: formData.email,
           password: formData.password,

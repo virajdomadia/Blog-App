@@ -47,7 +47,7 @@ const EditBlog = () => {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:5000/api/blogs/${id}`,
+        `https://blog-app-backend-nnuo.onrender.com/api/blogs/${id}`,
         {
           title,
           content,
